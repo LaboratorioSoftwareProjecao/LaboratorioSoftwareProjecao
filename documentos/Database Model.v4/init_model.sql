@@ -1,218 +1,214 @@
-create type user_group as enum (
-    'client', 'admin', 'professional'
+create type tipo_grupo_usuario as enum (
+    'cliente', 'admin', 'profissional'
 );
 
-create table users (
+create table usuarios (
     id INT generated always as identity primary key,
     email TEXT unique not null,
     
-    role user_group 
+    funcao tipo_grupo_usuario 
 );
 
-create type collection_type as enum (
-	'publication', 'exercise', 'analise', 'storage'
+create type tipo_colecao as enum (
+    'publicacao', 'exercicio', 'analise', 'armazenamento'
 );
 
-
-create table collection (
+create table colecao (
     id INT generated always as identity primary key,
-    description TEXT, -- breve descricao por parte do usuario sobre o momento em que tirou/gravou os arquivos 
-    type collection_type,
+    descricao TEXT, -- breve descricao por parte do usuario sobre o momento em que tirou/gravou os arquivos 
+    tipo tipo_colecao,
     
-    client_id INT references users(id)
+    cliente_id INT references usuarios(id)
 );
 
-create type media_type as enum (
-    'image', 'video'
+create type tipo_midia as enum (
+    'imagem', 'video'
 );
 
-create table media (
+create table midia (
     id INT generated always as identity primary key,
-    path VARCHAR(1024), -- caminho em que o arquivo real estará guardado em formato blob
-    type media_type, 
+    caminho VARCHAR(1024), -- caminho em que o arquivo real estará guardado
+    tipo tipo_midia, 
     
-    collection_id INT references collection(id) -- refenciando o grupo do arquivo
+    colecao_id INT references colecao(id)
 );
 
-create table diagnostic ( -- diagnostico gerado a partir da colecao de analises 
+create table diagnostico ( -- diagnostico gerado a partir da colecao de analises 
     id INT generated always as identity primary key,
-    weight numeric(10,2), -- peso
-    fat numeric(10,2), -- gordura corporal
-    lean_mass numeric(10,2), -- massa magra
-    symmetry numeric(10,2), 
-    description TEXT,
+    peso numeric(10,2), -- peso
+    gordura numeric(10,2), -- gordura corporal
+    massa_magra numeric(10,2), -- massa magra
+    simetria numeric(10,2), 
+    descricao TEXT,
     
-    client_id INT references users(id),
-    profession_id INT references users(id)
+    cliente_id INT references usuarios(id),
+    profissional_id INT references usuarios(id)
 );
 
-create table analysis ( -- analise unitaria de cada imagem/video 
+create table analise ( -- analise unitaria de cada imagem/video 
     id INT generated always as identity primary key,
-    pose VARCHAR, -- maybe can be ENUM
-    landmark TEXT, -- pontos de referencia gerados pela IA (se necessário)
-    proportions TEXT, -- proporcoes do corpo
-    confidence float, -- precisao nas analises
-    description TEXT,
+    pose VARCHAR,
+    pontos_referencia TEXT, -- pontos de referencia gerados pela IA
+    proporcoes TEXT, -- proporcoes do corpo
+    confianca float, -- precisao nas analises
+    descricao TEXT,
     
-    media_id INT references media(id),
-    diagnostic_id INT references diagnostic(id)
+    midia_id INT references midia(id),
+    diagnostico_id INT references diagnostico(id)
 );
 
-create table progress ( -- timeline dos diagnosticos \ evolucao do usuario
+create table progresso ( -- timeline dos diagnosticos \ evolucao do usuario
     id INT generated always as identity primary key,
-    fat_difference numeric(10,2), 
-    muscle_mass_difference numeric(10,2),
-    date_interval int,
+    diferenca_gordura numeric(10,2), 
+    diferenca_massa_muscular numeric(10,2),
+    intervalo_dias int,
     
-    user_id INT references users(id),
-    current_diag_id INT references diagnostic(id),
-    previous_diag_id INT references diagnostic(id)
+    usuario_id INT references usuarios(id),
+    diag_atual_id INT references diagnostico(id),
+    diag_anterior_id INT references diagnostico(id)
 );
 
 -- ============================================================
--- =================== notification schema ====================
+-- =================== schema de notificacao ==================
 -- ============================================================
 
-create type notification_type as enum (
-	'INFO', 'WARNING', 'ERROR'
+create type tipo_notificacao as enum (
+    'INFO', 'AVISO', 'ERRO'
 );
 
-create table notification (
-	id INT generated always as identity primary key,
-	title VARCHAR(255),
-	message TEXT not null,
-	type notification_type,
-	
-	user_id INT references users(id) 
-);
-
-create table recipient_notification (
-	id INT generated always as identity primary key,
-	read_at TIMESTAMP null,
-	
-	user_id INT references users(id),
-	notification_id INT references notification(id)
-);
-
-create type channel_type as enum (
-	'SYSTEM', 'EMAIL'
-);
-
-create type status_delivery as enum (
-	'PENDING', 'FAILED', 'SENT'
-);
-
-create table notification_delivery (
-	id INT generated always as identity primary key,
-	channel channel_type,
-	status status_delivery,
-	
-	recipient_id INT references recipient_notification(id)
-);
-
-
--- ============================================================
--- =================== subscription schema ====================
--- ============================================================
-
-create type plan_type as enum (
-	'Individual', 'Duo', 'Family'
-);
-
-create table plan (
-	id INT generated always as identity primary key,
-	name plan_type,
-	price numeric(12, 2),
-	vality_acess int default 30, -- quantos dias de acesso o usuario terá de acesso ao assinar o plano
-	credits_acess int -- quantidade de vezes que ele poderá utilizar a funcao principal (a ser revisado)
-);
-
-create table subscription (
-	id INT generated always as identity primary key,
-	periods_paid INT, -- quantidade de periodos que o usuario pagou pelo plano, ex: 1 igual a 30 dias, 2 igual a pagou pela validade do plano duas vezes 60 dias...
-	
-	user_id INT references users(id),
-	plan_id INT references plan(id)
-);
-
- create type payment_type as enum (
-   'PIX', 'CREDIT', 'DEBIT'
-);
-
-create type transaction_status as enum (
-   'PROCESSING', 'PROCESSED', 'FAILED'
-);
-
-create table transaction ( 
+create table notificacao (
     id INT generated always as identity primary key,
-    payment_method payment_type,
-    status transaction_status,
+    titulo VARCHAR(255),
+    mensagem TEXT not null,
+    tipo tipo_notificacao,
+    
+    usuario_id INT references usuarios(id) 
+);
+
+create table destinatario_notificacao (
+    id INT generated always as identity primary key,
+    lido_em TIMESTAMP null,
+    
+    usuario_id INT references usuarios(id),
+    notificacao_id INT references notificacao(id)
+);
+
+create type tipo_canal as enum (
+    'SISTEMA', 'EMAIL'
+);
+
+create type status_entrega as enum (
+    'PENDENTE', 'FALHOU', 'ENVIADO'
+);
+
+create table entrega_notificacao (
+    id INT generated always as identity primary key,
+    canal tipo_canal,
+    status status_entrega,
+    
+    destinatario_id INT references destinatario_notificacao(id)
+);
+
+-- ============================================================
+-- =================== schema de assinatura ===================
+-- ============================================================
+
+create type tipo_plano as enum (
+    'Individual', 'Duo', 'Familiar'
+);
+
+create table plano (
+    id INT generated always as identity primary key,
+    nome tipo_plano,
+    preco numeric(12, 2),
+    validade_acesso int default 30, -- dias de acesso ao assinar o plano
+    creditos_acesso int -- quantidade de uso da funcao principal
+);
+
+create table assinatura (
+    id INT generated always as identity primary key,
+    periodos_pagos INT,
+    
+    usuario_id INT references usuarios(id),
+    plano_id INT references plano(id)
+);
+
+create type tipo_pagamento as enum (
+   'PIX', 'CREDITO', 'DEBITO'
+);
+
+create type status_transacao as enum (
+   'PROCESSANDO', 'PROCESSADO', 'FALHOU'
+);
+
+create table transacao ( 
+    id INT generated always as identity primary key,
+    metodo_pagamento tipo_pagamento,
+    status status_transacao,
         
-    subscription_id INT references subscription(id) -- informacoes sobre o plano e o usuario estão diretamente na inscricao
+    assinatura_id INT references assinatura(id)
 );
 
-        
 -- ============================================================
--- =================== spreadsheet schema =====================
+-- =================== schema de planilha =====================
 -- ============================================================
 
-create type exercise_type as enum (
-	'leg', 'arm', 'back'
+create type tipo_exercicio as enum (
+    'perna', 'braco', 'costas'
 );
 
-create table exercise (
-	id INT generated always as identity primary key,
-	description TEXT,
-	type exercise_type,
+create table exercicio (
+    id INT generated always as identity primary key,
+    descricao TEXT,
+    tipo tipo_exercicio,
 
-	collection_id INT references collection(id)
+    colecao_id INT references colecao(id)
 );
 
-create table execution (
-	id INT generated always as identity primary key,
-	description TEXT,
-	repetition INT,
-	series INT,
-	
-	exercise_id INT references exercise(id)
+create table execucao (
+    id INT generated always as identity primary key,
+    descricao TEXT,
+    repeticao INT,
+    series INT,
+    
+    exercicio_id INT references exercicio(id)
 );
 
-create type daily_type as enum (
-	'leg', 'arm', 'back'
+create type tipo_diario as enum (
+    'perna', 'braco', 'costas'
 );
 
-create table daily (
-	id INT generated always as identity primary key,
-	description TEXT,
-	type daily_type
+create table diario (
+    id INT generated always as identity primary key,
+    descricao TEXT,
+    tipo tipo_diario
 );
 
-create table daily_execution (
-	daily_id INT references daily(id),
-	execution_id INT references execution(id),
-	step_suggestion INT
+create table execucao_diaria (
+    diario_id INT references diario(id),
+    execucao_id INT references execucao(id),
+    sugestao_passo INT
 );
 
-create type spreadsheet_type as enum (
-	'generic', 'personal'
+create type tipo_planilha as enum (
+    'generica', 'pessoal'
 );
 
-create table spreadsheet (
-	id INT generated always as identity primary key,
-	description TEXT,
-	type spreadsheet_type
+create table planilha (
+    id INT generated always as identity primary key,
+    descricao TEXT,
+    tipo tipo_planilha
 );
 
-create table spreadsheet_daily (
-	spreadsheet_id INT references spreadsheet(id),
-	daily_id INT references daily(id),
-	weekday INT
+create table planilha_diaria (
+    planilha_id INT references planilha(id),
+    diario_id INT references diario(id),
+    dia_semana INT
 );
 
-
-create table user_spreadsheet(
-	user_id INT references users(id),
-	spreadsheet_id INT references spreadsheet(id),
-	started_in DATE,
-	ended_in DATE
+create table usuario_planilha(
+    usuario_id INT references usuarios(id),
+    planilha_id INT references planilha(id),
+    iniciado_em DATE,
+    finalizado_em DATE
 );
