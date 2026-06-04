@@ -4,7 +4,7 @@
 
 | # | Artefato | Status |
 |---|----------|--------|
-| 1 | Atualização do banco de dados | Para Fazer |
+| 1 | Atualização do banco de dados | Em Andamento |
 | 2 | Desenvolvimento Inicial do Protótipo | Em Andamento |
 | 3 | Estrutura Inicial do Frontend | Para Fazer |
 | 4 | Estrutura Inicial do Backend | Para Fazer |
