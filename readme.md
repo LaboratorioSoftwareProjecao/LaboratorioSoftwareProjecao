@@ -42,7 +42,6 @@
 | Lucas | Developer |
 | Thiago | Developer |
 | Alef | Developer |
-| Marcos W. | Developer |
 | Joao Pedro | Developer |
 | Nayara | Developer |
 | Watanuki | Developer |
@@ -69,6 +68,7 @@
 |--------|-------|
 | Larissa | Tech Lead |
 | Arthur | Tech Lead |
+| Marcos W. | Developer |
 | Marcos L. | Developer |
 | Josiel | Developer |
 | Kelly | Developer |
