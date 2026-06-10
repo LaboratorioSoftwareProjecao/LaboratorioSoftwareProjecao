@@ -1,5 +1,8 @@
 ﻿# Software Factory Lab - Projecao
 
+## Links 
+[Miro - Board com diagramas de banco de dados](https://miro.com/app/board/uXjVHH0Ut-E=/?share_link_id=41169208559)
+
 ## A Produzir
 
 | # | Artefato | Status |
