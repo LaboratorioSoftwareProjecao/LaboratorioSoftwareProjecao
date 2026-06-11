@@ -1,4 +1,4 @@
-**Milton Fit Delas**
+**Fabrica de Software**
 
 Documento de Requisitos de Sistema
 
