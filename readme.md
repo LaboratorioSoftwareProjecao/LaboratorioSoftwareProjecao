@@ -40,14 +40,11 @@
 *Foco: UX/UI, prototipação e desenvolvimento das telas (Web/Mobile).*
 | Membro | Papel |
 |--------|-------|
-| Guilherme | Tech Lead | 
 | Arthur Sales | Tech Lead |
-| Lucas | Developer |
 | Thiago | Developer |
 | Alef | Developer |
 | Joao Pedro | Developer |
 | Nayara | Developer |
-| Watanuki | Developer |
 
 ---
 
@@ -61,7 +58,6 @@
 | Jose Filipe | Developer |
 | Gabriel Oliveira | Developer |
 | Gabriel P. | Developer |
-| Yukio | Developer |
 
 ---
 
@@ -75,10 +71,7 @@
 | Marcos L. | Developer |
 | Josiel | Developer |
 | Kelly | Developer |
-| Fabio | Developer |
 | Kaua | Developer |
-| Caua | Developer |
-| Andre | Developer |
 | Nicolly | Developer | 
 
 ---
