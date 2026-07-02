@@ -54,7 +54,6 @@
 |--------|-------|
 | Lorrany | Tech Lead |
 | Agenor | Tech Lead |
-| Filipe | Developer |
 | Jose Filipe | Developer |
 | Gabriel Oliveira | Developer |
 | Gabriel P. | Developer |
@@ -73,6 +72,7 @@
 | Kelly | Developer |
 | Kaua | Developer |
 | Nicolly | Developer | 
+| Felipe | Developer |
 
 ---
 > Ultima atualizacao: 23 de Maio de 2026
