@@ -1,12 +1,8 @@
 # Software Factory Lab — Projeção
 
-Repositório central da documentação e do acompanhamento do projeto **BS Fitness**.
+Repositório central da documentação e do acompanhamento do projeto.
 
 ## Etapa atual
-
-> **Desenvolvimento paralelo das primeiras entregas de cada equipe.**
-
-A documentação inicial, a consolidação do banco `v5` e sua apresentação foram concluídas. Frontend, Backend, AI Services e Banco de Dados seguem seus próprios roadmaps em paralelo.
 
 ## Concluídos
 
