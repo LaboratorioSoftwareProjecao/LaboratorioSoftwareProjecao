@@ -2,8 +2,6 @@
 
 Repositório central da documentação e do acompanhamento do projeto.
 
-## Etapa atual
-
 ## Concluídos
 
 - [x] Apresentação e documentação inicial do projeto.
