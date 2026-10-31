@@ -4,7 +4,7 @@ Repositório central da documentação e do acompanhamento do projeto.
 
 ## Em andamento
 
-## Progresso do Frontend
+### Progresso do Frontend
 - [ ] **Criar o protótipo no Figma.** **← etapa atual**
 - [ ] Apresentar o protótipo.
 - [ ] Ajustar o protótipo a partir do feedback.
@@ -16,7 +16,7 @@ Repositório central da documentação e do acompanhamento do projeto.
 - [ ] Implementar páginas e primeiras integrações.
 - [ ] Apresentar o fluxo implementado.
 
-## Progresso do Backend
+### Progresso do Backend
 - [ ] **Definir os primeiros contratos RESTful.** **← etapa atual**
 - [ ] Apresentar os contratos RESTful.
 - [ ] Definir a arquitetura do Backend.
@@ -28,7 +28,7 @@ Repositório central da documentação e do acompanhamento do projeto.
 - [ ] Implementar segurança e integrações.
 - [ ] Apresentar o fluxo implementado.
 
-## Progresso do AI Services
+### Progresso do AI Services
 - [ ] **Planejar os fluxos e a arquitetura dos serviços de IA.** **← etapa atual**
 - [ ] Apresentar o planejamento dos serviços de IA.
 - [ ] Definir os protocolos de fotos e vídeos.
