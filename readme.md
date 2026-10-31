@@ -2,24 +2,9 @@
 
 Repositório central da documentação e do acompanhamento do projeto.
 
-## Concluídos
-
-- [x] Apresentação e documentação inicial do projeto.
-- [x] Levantamento de requisitos `v2`.
-- [x] Backlog inicial `v1`.
-- [x] Diagrama de caso de uso `v1`.
-- [x] Diagrama de classes `v1`.
-- [x] Diagrama de sequência `v2`.
-- [x] Documento de Design Técnico `v1`.
-- [x] Formação das equipes.
-- [x] Organização dos repositórios e roadmaps.
-- [x] Modelagem do banco, versões `v1` a `v5`.
-- [x] Apresentação do banco de dados consolidado.
-
 ## Em andamento
 
-### Progresso do Frontend
-
+## Progresso do Frontend
 - [ ] **Criar o protótipo no Figma.** **← etapa atual**
 - [ ] Apresentar o protótipo.
 - [ ] Ajustar o protótipo a partir do feedback.
@@ -31,8 +16,7 @@ Repositório central da documentação e do acompanhamento do projeto.
 - [ ] Implementar páginas e primeiras integrações.
 - [ ] Apresentar o fluxo implementado.
 
-### Progresso do Backend
-
+## Progresso do Backend
 - [ ] **Definir os primeiros contratos RESTful.** **← etapa atual**
 - [ ] Apresentar os contratos RESTful.
 - [ ] Definir a arquitetura do Backend.
@@ -44,8 +28,7 @@ Repositório central da documentação e do acompanhamento do projeto.
 - [ ] Implementar segurança e integrações.
 - [ ] Apresentar o fluxo implementado.
 
-### Progresso do AI Services
-
+## Progresso do AI Services
 - [ ] **Planejar os fluxos e a arquitetura dos serviços de IA.** **← etapa atual**
 - [ ] Apresentar o planejamento dos serviços de IA.
 - [ ] Definir os protocolos de fotos e vídeos.
@@ -64,6 +47,19 @@ Repositório central da documentação e do acompanhamento do projeto.
 - [ ] Apresentar o chatbot.
 - [ ] Integrar os serviços de IA.
 - [ ] Apresentar a integração dos serviços de IA.
+
+## Concluídos
+- [x] Apresentação e documentação inicial do projeto.
+- [x] Levantamento de requisitos `v2`.
+- [x] Backlog inicial `v1`.
+- [x] Diagrama de caso de uso `v1`.
+- [x] Diagrama de classes `v1`.
+- [x] Diagrama de sequência `v2`.
+- [x] Documento de Design Técnico `v1`.
+- [x] Formação das equipes.
+- [x] Organização dos repositórios e roadmaps.
+- [x] Modelagem do banco, versões `v1` a `v5`.
+- [x] Apresentação do banco de dados consolidado.
 
 ## Repositórios
 
