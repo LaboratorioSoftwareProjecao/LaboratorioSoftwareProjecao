@@ -40,11 +40,8 @@
 *Foco: UX/UI, prototipação e desenvolvimento das telas (Web/Mobile).*
 | Membro | Papel |
 |--------|-------|
-| Arthur Sales | Tech Lead |
 | Thiago | Developer |
 | Alef | Developer |
-| Joao Pedro | Developer |
-| Nayara | Developer |
 
 ---
 
@@ -52,9 +49,6 @@
 *Foco: Modelos de inteligência, engenharia de dados e infraestrutura para a IA.*
 | Membro | Papel |
 |--------|-------|
-| Lorrany | Tech Lead |
-| Agenor | Tech Lead |
-| Jose Filipe | Developer |
 | Gabriel Oliveira | Developer |
 | Gabriel P. | Developer |
 
@@ -65,14 +59,13 @@
 | Membro | Papel |
 |--------|-------|
 | Larissa | Tech Lead |
-| Arthur | Tech Lead |
-| Marcos W. | Developer |
-| Marcos L. | Developer |
+| Nicolly | Developer | 
+| Lorrany | Developer | 
+| Marcos | Developer |
 | Josiel | Developer |
 | Kelly | Developer |
 | Kaua | Developer |
-| Nicolly | Developer | 
-| Felipe | Developer |
+
 
 ---
 > Ultima atualizacao: 23 de Maio de 2026
