@@ -1,10 +1,10 @@
 # Software Factory Lab — Projeção
 
-Repositório central da documentação e do acompanhamento do projeto **BS Fitness**.
+Repositório central da documentação e do acompanhamento do projeto.
 
 ## Em andamento
 
-Frontend e Backend seguem seus roadmaps em paralelo para implementar o fluxo definido no [MVP consolidado](MVP.md). Os recursos de AI Services foram reservados para a segunda etapa.
+Frontend e Backend seguem seus roadmaps em paralelo para implementar o fluxo definido no [MVP consolidado](MVP.md).
 
 ### Progresso do Frontend (Foco MVP)
 
@@ -40,10 +40,6 @@ Frontend e Backend seguem seus roadmaps em paralelo para implementar o fluxo def
 - [ ] Integrar com o Frontend e homologar E2E.
 - [ ] Apresentar o fluxo completo do MVP implementado.
 
-## Segunda etapa — AI Services
-
-AI Services não possui entrega funcional obrigatória no MVP. Análise postural, diagnóstico automatizado, recomendações, processamento de fotos e vídeos e bot de IA serão planejados e desenvolvidos após a validação do fluxo inicial.
-
 ## Concluídos
 
 - [x] Apresentação e documentação inicial do projeto.
@@ -63,7 +59,6 @@ AI Services não possui entrega funcional obrigatória no MVP. Análise postural
 
 - [Frontend](https://github.com/LaboratorioSoftwareProjecao/Frontend) — aplicativo mobile e protótipos.
 - [Backend](https://github.com/LaboratorioSoftwareProjecao/Backend) — APIs, regras de negócio e segurança.
-- [AI Services](https://github.com/LaboratorioSoftwareProjecao/AI-Services) — serviços de análise, recomendações e chatbot previstos para a segunda etapa.
 - [Database](https://github.com/LaboratorioSoftwareProjecao/Database) — modelo, migrations e histórico dos dados.
 
 ## Documentação
@@ -90,11 +85,9 @@ AI Services não possui entrega funcional obrigatória no MVP. Análise postural
 
 ### Team 1 — Frontend e Protótipo
 
+- Agenor - Tech Lead
 - Thiago — Developer
 - Alef — Developer
-
-### Team 2 — IA e Banco de Dados
-
 - Gabriel Oliveira — Developer
 - Gabriel P. — Developer
 
