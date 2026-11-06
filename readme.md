@@ -1,54 +1,51 @@
 # Software Factory Lab — Projeção
 
-Repositório central da documentação e do acompanhamento do projeto.
+Repositório central da documentação e do acompanhamento do projeto **BS Fitness**.
 
 ## Em andamento
 
-### Progresso do Frontend
-- [ ] **Criar o protótipo no Figma.** **← etapa atual**
-- [ ] Apresentar o protótipo.
+Frontend e Backend seguem seus roadmaps em paralelo para implementar o fluxo definido no [MVP consolidado](MVP.md). Os recursos de AI Services foram reservados para a segunda etapa.
+
+### Progresso do Frontend (Foco MVP)
+
+- [ ] **Criar o protótipo no Figma (fluxos do MVP).** **← etapa atual**
+- [ ] Apresentar o protótipo do MVP.
 - [ ] Ajustar o protótipo a partir do feedback.
 - [ ] Apresentar e aprovar o protótipo revisado.
 - [ ] Definir a arquitetura do Frontend.
 - [ ] Apresentar a arquitetura.
 - [ ] Criar a estrutura inicial em React Native.
 - [ ] Apresentar a estrutura inicial.
-- [ ] Implementar páginas e primeiras integrações.
-- [ ] Apresentar o fluxo implementado.
+- [ ] Implementar autenticação, objetivos e Mapa da Dor.
+- [ ] Implementar planilha, execução e histórico básico do aluno.
+- [ ] Implementar painel do personal e construtor de planilhas.
+- [ ] Implementar bate-papo entre aluno e personal.
+- [ ] Apresentar as telas com dados simulados.
+- [ ] Integrar com o Backend (perfis, objetivos, dores, vínculos, planilhas, sessões e mensagens).
+- [ ] Apresentar o fluxo integrado ponta a ponta.
 
-### Progresso do Backend
-- [ ] **Definir os primeiros contratos RESTful.** **← etapa atual**
+### Progresso do Backend (Foco MVP)
+
+- [ ] **Definir contratos RESTful do MVP (OpenAPI/Swagger).** **← etapa atual**
 - [ ] Apresentar os contratos RESTful.
 - [ ] Definir a arquitetura do Backend.
 - [ ] Apresentar a arquitetura.
 - [ ] Criar a estrutura inicial em Spring Boot.
 - [ ] Apresentar a estrutura inicial.
-- [ ] Implementar o primeiro recurso com persistência e testes.
-- [ ] Apresentar o primeiro recurso.
-- [ ] Implementar segurança e integrações.
-- [ ] Apresentar o fluxo implementado.
+- [ ] Implementar autenticação JWT e perfis (Aluno/Personal).
+- [ ] Implementar objetivos e Mapa da Dor.
+- [ ] Implementar vínculo e gestão básica de alunos.
+- [ ] Implementar planilhas, conclusão de sessões e acompanhamento básico.
+- [ ] Implementar conversas e mensagens do bate-papo.
+- [ ] Integrar com o Frontend e homologar E2E.
+- [ ] Apresentar o fluxo completo do MVP implementado.
 
-### Progresso do AI Services
-- [ ] **Planejar os fluxos e a arquitetura dos serviços de IA.** **← etapa atual**
-- [ ] Apresentar o planejamento dos serviços de IA.
-- [ ] Definir os protocolos de fotos e vídeos.
-- [ ] Apresentar os protocolos.
-- [ ] Desenvolver a análise física.
-- [ ] Apresentar a análise física.
-- [ ] Desenvolver a análise de exercícios pela câmera.
-- [ ] Apresentar a análise de exercícios.
-- [ ] Desenvolver as recomendações.
-- [ ] Apresentar as recomendações.
-- [ ] Desenvolver a construção de treinos.
-- [ ] Apresentar a construção de treinos.
-- [ ] Desenvolver o acompanhamento da evolução.
-- [ ] Apresentar o acompanhamento da evolução.
-- [ ] Desenvolver o chatbot especializado.
-- [ ] Apresentar o chatbot.
-- [ ] Integrar os serviços de IA.
-- [ ] Apresentar a integração dos serviços de IA.
+## Segunda etapa — AI Services
+
+AI Services não possui entrega funcional obrigatória no MVP. Análise postural, diagnóstico automatizado, recomendações, processamento de fotos e vídeos e bot de IA serão planejados e desenvolvidos após a validação do fluxo inicial.
 
 ## Concluídos
+
 - [x] Apresentação e documentação inicial do projeto.
 - [x] Levantamento de requisitos `v2`.
 - [x] Backlog inicial `v1`.
@@ -60,16 +57,19 @@ Repositório central da documentação e do acompanhamento do projeto.
 - [x] Organização dos repositórios e roadmaps.
 - [x] Modelagem do banco, versões `v1` a `v5`.
 - [x] Apresentação do banco de dados consolidado.
+- [x] Definição e fechamento do [escopo consolidado do MVP](MVP.md).
 
 ## Repositórios
 
 - [Frontend](https://github.com/LaboratorioSoftwareProjecao/Frontend) — aplicativo mobile e protótipos.
 - [Backend](https://github.com/LaboratorioSoftwareProjecao/Backend) — APIs, regras de negócio e segurança.
-- [AI Services](https://github.com/LaboratorioSoftwareProjecao/AI-Services) — análises, recomendações, treinos, evolução e chatbot.
+- [AI Services](https://github.com/LaboratorioSoftwareProjecao/AI-Services) — serviços de análise, recomendações e chatbot previstos para a segunda etapa.
 - [Database](https://github.com/LaboratorioSoftwareProjecao/Database) — modelo, migrations e histórico dos dados.
 
 ## Documentação
 
+- [MVP consolidado](MVP.md)
+- [Proposta inicial de MVP](proposta_MVP.md)
 - [Apresentação do projeto](<Documentacao - Cliente/0 - ApresentacãoProjeto.md>)
 - [Documento inicial](<Documentacao - Cliente/1 - Documento Inicial.pdf>)
 - [Documento com ajustes de IA](<Documentacao - Cliente/2 - Documento Inicial com ajuste da IA.pdf>)
