@@ -96,7 +96,6 @@ Frontend e Backend seguem seus roadmaps em paralelo para implementar o fluxo def
 - Larissa — Tech Lead
 - Nicolly — Developer
 - Lorrany — Developer
-- Marcos — Developer
 - Josiel — Developer
 - Kelly — Developer
 - Kaua — Developer
