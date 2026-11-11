@@ -91,7 +91,7 @@ Frontend e Backend seguem seus roadmaps em paralelo para implementar o fluxo def
 - Gabriel Oliveira — Developer
 - Gabriel P. — Developer
 
-### Team 3 — Backend e Banco de Dados
+### Team 2 — Backend e Banco de Dados
 
 - Larissa — Tech Lead
 - Nicolly — Developer
