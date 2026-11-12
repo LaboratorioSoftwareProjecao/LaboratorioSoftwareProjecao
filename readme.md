@@ -8,7 +8,9 @@ Frontend e Backend seguem seus roadmaps em paralelo para implementar o fluxo def
 
 ### Progresso do Frontend (Foco MVP)
 
-- [ ] **Criar o protótipo no Figma (fluxos do MVP).** **← etapa atual**
+- [ ] **Definir a identidade visual.** **← etapa atual**
+- [ ] Apresentar a identidade visual.
+- [ ] Criar o protótipo no Figma (fluxos do MVP).
 - [ ] Apresentar o protótipo do MVP.
 - [ ] Ajustar o protótipo a partir do feedback.
 - [ ] Apresentar e aprovar o protótipo revisado.
