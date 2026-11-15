@@ -87,6 +87,7 @@ Frontend e Backend seguem seus roadmaps em paralelo para implementar o fluxo def
 
 ### Team 1 — Frontend e Protótipo
 
+- Arthur - Tech Lead
 - Agenor - Tech Lead
 - Thiago — Developer
 - Alef — Developer
